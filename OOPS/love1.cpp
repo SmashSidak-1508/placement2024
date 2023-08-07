@@ -12,6 +12,31 @@ public:
     int age;
     string name;
 
+    // Default Constructor
+    Animal()
+    {
+        this->weight = 0;
+        this->age = 0;
+        cout << "constructor called" << endl;
+    }
+
+    // parameterised
+
+    Animal(int age)
+    {
+        this->age = age;
+        cout << "para:" << this->age << endl;
+    }
+
+    Animal(int age, int weight, string name)
+    {
+        this->age = age;
+        this->weight = weight;
+        this->name = name;
+        cout << "para:" << this->age << " " << this->weight << " " << this->name << endl;
+    }
+
+    // copy constructor
     // behaviour and functions
     void eat()
     {
@@ -55,6 +80,8 @@ int main()
     (*suresh).name = "bill";
     suresh->eat();
     suresh->sleep();
+    Animal *b = new Animal(100);
+    Animal a1(12, 10, "sidak");
 
-    //  padding and greedy alignment
+        //  padding and greedy alignment
 }
